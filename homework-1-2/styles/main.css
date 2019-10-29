@@ -1,0 +1,495 @@
+/* ----------------------------------------------- */
+/* ----------------------------------------------- */
+/* BASIC SETUP */
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+*:focus {
+  outline: none;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  background-color: #fff;
+  text-rendering: optimizeLegibility;
+  font-size: 20px;
+  font-family: Verdana, Geneva, sans-serif;
+  color: #000;
+}
+
+/* ----------------------------------------------- */
+/* REUSABLE COMPONENTS */
+/* ----------------------------------------------- */
+.clearfix {
+  zoom: 1;
+}
+
+.clearfix:after {
+  content: ".";
+  clear: both;
+  display: block;
+  visibility: hidden;
+  height: 0;
+}
+
+/* ----------------------------------------------- */
+/* LAYOUT AND GRID ELEMENTS */
+/* ----------------------------------------------- */
+/* LAYOUT =========================================*/
+.l-list {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.l-list--poll-sex {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  padding: 15px 0;
+}
+
+.l-list--personal-info {
+  padding: 10px 0;
+}
+
+.l-list--poll-sex .l-list__item {
+  padding: 0 5px;
+}
+
+.l-list--poll-sex .l-list__item:first-child {
+  padding: 0;
+}
+
+/* GRID ===========================================*/
+/* GRID OF TWO */
+.span-2-of-2 {
+  width: 100%;
+}
+
+.span-1-of-2 {
+  width: 50%;
+}
+
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+@media only screen and (max-width: 480px) {
+  .span-2-of-2 {
+    width: 100%;
+  }
+  .span-1-of-2 {
+    width: 100%;
+  }
+}
+
+/* GRID OF THREE */
+.span-3-of-3 {
+  width: 100%;
+}
+
+.span-2-of-3 {
+  width: 66%;
+}
+
+.span-1-of-3 {
+  width: 33%;
+}
+
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+@media only screen and (max-width: 480px) {
+  .span-3-of-3 {
+    width: 100%;
+  }
+  .span-2-of-3 {
+    width: 100%;
+  }
+  .span-1-of-3 {
+    width: 100%;
+  }
+}
+
+/* ----------------------------------------------- */
+/* COMMON STYLES */
+/* ----------------------------------------------- */
+.main-heading {
+  text-align: center;
+}
+
+.secondary-heading {
+  text-align: center;
+  margin: 1.5em 0;
+}
+
+/* ----------------------------------------------- */
+/* FORM */
+/* ----------------------------------------------- */
+.form {
+  width: 50%;
+  margin: 0 auto;
+}
+
+/* FORM COMPONENTS */
+.c {
+  padding: 5px;
+}
+
+.c--mt-m {
+  margin-top: 10px;
+}
+
+.c--clean-p {
+  padding: 0;
+}
+
+.c--clean-pt {
+  padding-top: 0;
+}
+
+.c--clean-pb {
+  padding-bottom: 0;
+}
+
+.c--overlap {
+  padding: 0 5px 0;
+  margin-top: -1px;
+}
+
+.c-research-question {
+  margin: 4% 0;
+  font-weight: bold;
+}
+
+.c-research-question--clean-mb {
+  margin-bottom: 0;
+}
+
+.c-research-question__item {
+  display: block;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 0.9em;
+}
+
+.c-fieldset {
+  margin-bottom: 30px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  padding: 4% 8%;
+}
+
+.c-fieldset__legend {
+  padding: 0 8px;
+  text-align: center;
+  white-space: nowrap;
+  font-style: italic;
+  font-size: 0.9em;
+}
+
+.c-input-text {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c-input-text--col {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+
+.c-input-text__input {
+  min-width: 50%;
+  display: block;
+  height: 40px;
+  border: 1px solid #888;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  padding: 8px;
+  color: #333;
+}
+
+.c-input-text__label {
+  min-width: 33%;
+  display: block;
+}
+
+.c-input-text__label--nowrap {
+  white-space: nowrap;
+}
+
+.c-input-text__label--right {
+  padding-left: 10px;
+}
+
+.c-input-text__label--left {
+  padding-right: 10px;
+}
+
+.c-input-text__label--fz-less {
+  font-size: 0.9em;
+}
+
+.c-input-text--age .c-input-text__input {
+  min-width: 0;
+  width: 55px;
+}
+
+.c-input-text--col .c-input-text__label {
+  padding-bottom: 5px;
+}
+
+.c-checkbox {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+  -webkit-align-items: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+}
+
+.c-checkbox__input {
+  display: block;
+}
+
+.c-checkbox__label {
+  display: block;
+  padding-left: 8px;
+}
+
+.c-radio {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+  -webkit-align-items: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+}
+
+.c-radio__input {
+  display: block;
+}
+
+.c-radio__label {
+  display: block;
+  padding-left: 8px;
+}
+
+.c-select__select {
+  min-width: 33%;
+  border: 1px solid #888;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  padding: 8px;
+  color: #333;
+  font-size: 0.9em;
+}
+
+.c-textarea__textarea {
+  resize: none;
+  width: 80%;
+  height: 150px;
+  padding: 8px;
+  line-height: 1.4em;
+}
+
+.c-input-submit {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 15px 0;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c-input-submit__input {
+  display: block;
+  font-size: 0.9em;
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#ecf0f1),
+    to(#8c9296)
+  );
+  background: -webkit-linear-gradient(#ecf0f1, #8c9296);
+  background: -o-linear-gradient(#ecf0f1, #8c9296);
+  background: linear-gradient(#ecf0f1, #8c9296);
+  padding: 12px 25px 10px;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  text-align: center;
+  letter-spacing: 0.1em;
+}
+
+.c-input-submit__input:hover {
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#d0d4d5),
+    to(#666c70)
+  );
+  background: -webkit-linear-gradient(#d0d4d5, #666c70);
+  background: -o-linear-gradient(#d0d4d5, #666c70);
+  background: linear-gradient(#d0d4d5, #666c70);
+}
+
+.c-input-submit__input:active {
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#8c9296),
+    to(#c7cbcc)
+  );
+  background: -webkit-linear-gradient(#8c9296, #c7cbcc);
+  background: -o-linear-gradient(#8c9296, #c7cbcc);
+  background: linear-gradient(#8c9296, #c7cbcc);
+}
+
+@media only screen and (max-width: 992px) {
+  body {
+    font-size: 16px;
+  }
+  .main-heading {
+    font-size: 1.6em;
+  }
+  .secondary-heading {
+    font-size: 1.3em;
+  }
+  .form {
+    width: 60%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+  .main-heading {
+    font-size: 1.5em;
+  }
+  .secondary-heading {
+    font-size: 1.2em;
+  }
+  .form {
+    width: 70%;
+  }
+  .l-list--poll-sex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center;
+  }
+  .c-fieldset {
+    padding: 4% 15%;
+  }
+  .c-input-text {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .c-input-text__input {
+    -webkit-box-ordinal-group: 2;
+    -webkit-order: 1;
+    -ms-flex-order: 1;
+    order: 1;
+    width: 100%;
+    text-align: center;
+  }
+  .c-input-text__label {
+    width: 100%;
+    padding-bottom: 5px;
+    text-align: center;
+  }
+  .c-input-text__label--right {
+    padding-top: 15px;
+    padding-bottom: 10px;
+  }
+  .c-input-text--age {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .c-input-text--age .c-input-text__input {
+    -webkit-box-ordinal-group: 1;
+    -webkit-order: 0;
+    -ms-flex-order: 0;
+    order: 0;
+    width: 50px;
+  }
+  .c-input-text--age .c-input-text__label {
+    min-width: 0;
+    width: auto;
+    padding: 0 10px;
+    text-align: left;
+  }
+  .c-textarea__textarea {
+    width: 100%;
+    height: 100px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  body {
+    min-width: 320px;
+    padding: 15px;
+    font-size: 14px;
+  }
+  .form {
+    width: 90%;
+  }
+  .c-select__select {
+    min-width: 50%;
+  }
+}

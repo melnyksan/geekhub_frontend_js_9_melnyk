@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Homework 1-2 - Learning Forms and its elements</title>
+    <link rel="stylesheet" href="./styles/grid.css">
+    <link rel="stylesheet" href="./styles/main.css">
+</head>
+<body>
+    <section class="section-form">
+
+
+        <h1 class="main-heading">Урок "Формы": теги и их атрибуты.</h1>
+        <h2 class="secondary-heading">Расскажите немного о себе...</h2>
+
+        <form action="#" method="post" class="form">
+            <fieldset class="c-fieldset">
+                <legend class="c-fieldset__legend">Коротко о себе</legend>
+                <ul class="l-list">
+                    <li class="l-list__item">
+                        <p class="c c-input-text">
+                            <label for="first-name" class="c-input-text__label"> Имя</label>
+                            <input type="text" name="first-name" id="first-name" class="c-input-text__input" placeholder="Введите ваше имя">
+                        </p>
+                    </li>
+
+                    <li class="l-list__item">
+                        <p class="c c-input-text">
+                            <label for="last-name" class="c-input-text__label"> Фамилия</label>
+                            <input type="text" name="last-name" id="last-name" class="c-input-text__input" placeholder="Введите вашу фамилию">
+                        </p>
+                    </li>
+                </ul>
+
+                <ul class="l-list l-list--poll-sex">
+                    <li class="l-list__item l-list__item span-1-of-3">
+                        <p class="c c-group-label">Пол</p>
+                    </li>
+
+                    <li class="l-list__item">
+                        <p class="c c-radio">
+                            <input type="radio" name="sex" id="sex-1" class="c-radio__input c-radio__input--clean-ml" checked value="male">
+                            <label for="sex-1" class="c-radio__label">мужской</label>
+                        </p>
+                    </li>
+
+                    <li class="l-list__item">
+                        <p class="c c-radio">
+                            <input type="radio" name="sex" id="sex-2" class="c-radio__input" value="female">
+                            <label for="sex-2" class="c-radio__label">женский</label>
+                        </p>
+                    </li>
+                </ul>
+
+                <p class="c c-input-text c-input-text--age">
+                    <label for="age" class="c-input-text__label">Возраст</label>
+                    <input type="text" name="age" id="age" class="c-input-text__input" maxlength="3" pattern="[0-1]{1}[0-9]{0,2}" title="Введите ваш возраст">
+                    <label for="age" class="c-input-text__label c-input-text__label--right">лет</label>
+                </p>
+            </fieldset>
+
+            <fieldset class="c-fieldset">
+                <legend class="c-fieldset__legend">Подробнее о себе</legend>
+                <ul class="l-list">
+                    <li class="l-list__item">
+                        <p class="c c-radio">
+                            <input type="radio" name="gender" id="gender-1" class="c-radio__input" value="guy" checked>
+                            <label for="gender-1" class="c-radio__label">Молодой парень</label>
+                        </p>
+                    </li>
+        
+                    <li class="l-list__item">
+                        <p class="c c-radio">
+                            <input type="radio" name="gender" id="gender-2" class="c-radio__input" value="girl">
+                            <label for="gender-2" class="c-radio__label">Девушка</label>
+                        </p>
+                    </li>
+                </ul>
+        
+                <ul class="l-list l-list--personal-info">
+                    <li class="l-list__item">
+                        <p class="c c--clean-pb c-input-text">
+                            <input type="text" name="birthday" id="birthday" class="c-input-text__input span-1-of-2">
+                            <label for="birthday" class="c-input-text__label c-input-text__label--right c-input-text__label--fz-less">Дата рождения</label>
+                        </p>
+                    </li>
+        
+                    <li class="l-list__item">
+                        <p class="c c--overlap c-input-text">
+                            <input type="text" name="marital-status" id="marital-status" class="c-input-text__input span-1-of-2">
+                            <label for="marital-status" class="c-input-text__label c-input-text__label--right c-input-text__label--fz-less">Семейное положение</label>
+                        </p>
+                    </li>
+        
+                    <li class="l-list__item">
+                        <p class="c c--overlap c-input-text">
+                            <input type="text" name="social-status" id="social-status" class="c-input-text__input span-1-of-2">
+                            <label for="social-status" class="c-input-text__label c-input-text__label--right c-input-text__label--fz-less">Социальный статус</label>
+                        </p>
+                    </li>
+        
+                    <li class="l-list__item">
+                        <p class="c c--overlap c-input-text">
+                            <input type="text" name="location" id="location" class="c-input-text__input span-1-of-2">
+                            <label for="location" class="c-input-text__label c-input-text__label--right c-input-text__label--fz-less">Место&shy;жительства</label>
+                        </p>
+                    </li>
+                </ul>
+        
+                <p class="c c-research-question">Что вы обычно делаете на выходных:</p>
+        
+                <ul class="l-list">
+                    <li class="l-list__item">
+                        <p class="c c-checkbox">
+                            <input type="checkbox" name="sleeping" id="sleeping" class="c-checkbox__input" value="sleeping">
+                            <label for="sleeping" class="c-checkbox__label">Сплю</label>
+                        </p>
+                    </li>
+        
+                    <li class="l-list__item">
+                        <p class="c c-checkbox">
+                            <input type="checkbox" name="walking" id="walking" class="c-checkbox__input" value="walking">
+                            <label for="walking" class="c-checkbox__label">Гуляю с друзьями</label>
+                        </p>
+                    </li>
+        
+                    <li class="l-list__item">
+                        <p class="c c-checkbox">
+                            <input type="checkbox" name="fishing" id="fishing" class="c-checkbox__input" value="fishing">
+                            <label for="fishing" class="c-checkbox__label">Хожу на рыбалку</label>
+                        </p>
+                    </li>
+        
+                    <li class="l-list__item">
+                        <p class="c c-checkbox">
+                            <input type="checkbox" name="play-cards" id="play-cards" class="c-checkbox__input" value="play-cards">
+                            <label for="play-cards" class="c-checkbox__label">Играю в карты</label>
+                        </p>
+                    </li>
+                </ul>
+        
+                <p class="c c-research-question">Рассказать о формах в книге, посвященной HTML</p>
+        
+                <p class="c c-select">
+                    <select name="some-name-1" class="c-select__select">
+                        <option class="c-select__option" value="name-book-1" selected>name-book-1</option>
+                        <option class="c-select__option" value="name-book-2">name-book-2</option>
+                        <option class="c-select__option" value="name-book-3">name-book-3</option>
+                        <option class="c-select__option" value="name-book-4">name-book-4</option>
+                        <option class="c-select__option" value="name-book-5">name-book-5</option>
+                    </select>
+                </p>
+        
+                <p class="c c-research-question">Сколько книг вы прочитали за свою жизнь:</p>
+        
+                <ul class="l-list">
+                    <li class="l-list__item">
+                        <p class="c c-radio">
+                            <input type="radio" name="books-number" id="books-number-1" class="c-radio__input" value="0-10">
+                            <label for="books-number-1" class="c-radio__label">0-10</label>
+                        </p>
+                    </li>
+        
+                    <li class="l-list__item">
+                        <p class="c c-radio">
+                            <input type="radio" name="books-number" id="books-number-2" class="c-radio__input" value="11-20">
+                            <label for="books-number-2" class="c-radio__label">11-20</label>
+                        </p>
+                    </li>
+        
+                    <li class="l-list__item">
+                        <p class="c c-radio">
+                            <input type="radio" name="books-number" id="books-number-3" class="c-radio__input" value="21-50">
+                            <label for="books-number-3" class="c-radio__label">21-50</label>
+                        </p>
+                    </li>
+        
+                    <li class="l-list__item">
+                        <p class="c c-radio">
+                            <input type="radio" name="books-number" id="books-number-4" class="c-radio__input" value="50+">
+                            <label for="books-number-4" class="c-radio__label">50+</label>
+                        </p>
+                    </li>
+                </ul>
+        
+                <p class="c c-research-question c-research-question--clean-mb">Ваши коментарии:</p>
+        
+                <p class="c c-textarea">
+                    <textarea name="comment" class="c-textarea__textarea"></textarea>
+                </p>
+        
+                <p class="c c--mt-m c-select">
+                    <select name="some-name-2" class="c-select__select" size="3" multiple>
+                        <option class="c-select__option" value="value-1">value-1</option>
+                        <option class="c-select__option" value="value-2" selected>value-2</option>
+                        <option class="c-select__option" value="value-3">value-3</option>
+                    </select>
+                </p>
+        
+            </fieldset>
+        
+            <fieldset class="c-fieldset">
+                <legend class="c-fieldset__legend">И в заключении</legend>
+                <p class="c c-input-text">
+                    <input type="text" class="c-input-text__input span-2-of-3" name="disabled" value="Это поле было введено до вас" disabled>
+                </p>
+        
+                <p class="c c--mt-m c-input-text c-input-text--col">
+                    <label for="email" class="c-input-text__label">Email:</label>
+                    <input type="email" id="email" name="email" class="c-input-text__input span-2-of-3">
+                </p>
+        
+                <p class="c-research-question">Хотите подписаться на самую модную рассылку спама?
+                    <span class="c-research-question__item">Выберите категории</span>
+                </p>
+                
+                <ul class="l-list">
+                    <li class="l-list__item">
+                        <p class="c-checkbox">
+                            <input type="checkbox" name="equipment" id="equipment" class="c-checkbox__input" value="equipment">
+                            <label for="equipment" class="c-checkbox__label">Оборудование</label>
+                        </p>
+                    </li>
+        
+                    <li class="l-list__item">
+                        <p class="c-checkbox">
+                            <input type="checkbox" name="cook" id="cook" class="c-checkbox__input" value="cook">
+                            <label for="cook" class="c-checkbox__label">Как приготовить обеды?</label>
+                        </p>
+                    </li>
+        
+                    <li class="l-list__item">
+                        <p class="c-checkbox">
+                            <input type="checkbox" name="million" id="million" class="c-checkbox__input" value="million">
+                            <label for="million" class="c-checkbox__label">Заработай миллион за&nbsp;два&nbsp;дня!</label>
+                        </p>
+                    </li>
+                </ul>
+        
+                <p class="c-research-question">На сколько сложная задача:</p>
+        
+                <ul class="l-list">
+                    <li class="l-list__item">
+                        <p class="c-radio">
+                            <input type="radio" name="poll" id="poll-1" class="c-radio__input" value="easy" checked>
+                            <label for="poll-1" class="c-radio__label">Совсем нет</label>
+                        </p>
+                    </li>
+        
+                    <li class="l-list__item">
+                        <p class="c-radio">
+                            <input type="radio" name="poll" id="poll-2" class="c-radio__input" value="normally">
+                            <label for="poll-2" class="c-radio__label">Так себе</label>
+                        </p>
+                    </li>
+        
+                    <li class="l-list__item">
+                        <p class="c-radio">
+                            <input type="radio" name="poll" id="poll-3" class="c-radio__input" value="hard">
+                            <label for="poll-3" class="c-radio__label">Еле справился</label>
+                        </p>
+                    </li>
+                </ul>
+            </fieldset>
+        
+            <p class="c-input-submit form__c-input-submit">
+                <input type="submit" class="c-input-submit__input" value="Отправить">
+            </p>
+        
+        </form>
+    </section>
+</body>
+</html>
